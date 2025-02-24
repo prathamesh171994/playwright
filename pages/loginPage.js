@@ -1,5 +1,3 @@
-// loginPage.js
-
 export class LoginPage {
     constructor(page) {
         this.page = page;
