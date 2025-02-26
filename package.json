@@ -2,13 +2,16 @@
   "name": "playwrighttests",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test --config=playwright.config.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.50.1",
+    "@reportportal/agent-js-playwright": "^5.1.11",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.13.1",
     "allure-js-commons": "^3.2.0",

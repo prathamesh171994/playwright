@@ -1,4 +1,5 @@
-import { APIActions } from '../../lib/APIActions';
+import { ReportingApi } from '@reportportal/agent-js-playwright';
+import { APIActions } from '../../../lib/APIActions';
 import { test } from '@playwright/test';
 
 const apiActions = new APIActions();
@@ -15,4 +16,7 @@ test(`postUsers`, { tag: '@API'}, async ({ request }) => {
 
     const responseBodyHeaders = (await apiActions.readValuesFromTextFile(`postUsers`)).split(`#`)[2];
     await apiActions.verifyResponseHeader(responseBodyHeaders, response.headersArray(), `Respomse Headers`);
+
+    ReportingApi.info('Test Passed');
+    
 });
